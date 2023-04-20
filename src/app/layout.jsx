@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Google Clone",
@@ -10,7 +11,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head />
-      <body>{children}</body>
+      <body>
+        {children}
+
+        {/* footer */}
+        <Footer />
+      </body>
     </html>
   );
 }
