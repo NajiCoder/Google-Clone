@@ -11,10 +11,8 @@ export default function Country() {
       `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&result_type=country&key=${process.env.NEXT_PUBLIC_API_KEY}`
     );
     const data = await res.json();
-    console.log(data);
     if (data.results.length > 0) {
       const countryName = data.results[0].formatted_address;
-      console.log(countryName);
       setCountry(countryName);
     }
   };
